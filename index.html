@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="header">
+            <input placeholder="Enter City Name" required id="searchbar">
+            <div id="unit-toggle">
+                <h4>F/C</h4>
+                <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+            </div>
+
+
+        </div>
+        <div id="current-location"></div>
+        <div id="future-forecast"></div>
+    </div>
 </body>
 </html>
