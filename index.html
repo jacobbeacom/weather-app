@@ -14,16 +14,16 @@
 <body>
     <div id="container">
         <div id="header">
-            <input placeholder="Enter City Name" required id="searchbar">
-            <div id="unit-toggle">
+            <form id="weather-search">
+                <input placeholder="Enter City Name" required id="searchbar">
+                <button type="submit"></button>
                 <label class="toggle">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                    <span class="labels" data-on="C°" data-off="F°"></span>
-                  </label>
-                  </label>
-                  </div>
-            </div>
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                        <span class="labels" data-on="C°" data-off="F°"></span>
+                </label>
+            </form>    
+        </div>
         <div id="weather-current">
             <div id="weather-main">
                 <h1 id="current-location">Minneapolis</h1>
