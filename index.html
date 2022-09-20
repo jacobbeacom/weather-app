@@ -7,14 +7,22 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div id="container">
         <div id="header">
             <input placeholder="Enter City Name" required id="searchbar">
             <div id="unit-toggle">
-                <h4>F/C</h4>
-                <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    <span class="labels" data-on="C°" data-off="F°"></span>
+                  </label>
+                  </label>
+                  </div>
             </div>
         </div>
         <div id="weather-current">
