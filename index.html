@@ -16,25 +16,24 @@
         <div id="header">
             <form id="weather-search">
                 <input placeholder="Enter City Name" required id="searchbar">
-                <button type="submit"></button>
+                <button id="getWeather">Get Weather</button>
                 <label class="toggle">
-                        <input type="checkbox">
+                        <input type="checkbox" id="units">
                         <span class="slider"></span>
                         <span class="labels" data-on="C°" data-off="F°"></span>
                 </label>
             </form>    
         </div>
-        <div id="weather-current">
-            <div id="weather-main">
+        <div id="content-area">
+            <div id="weather-main" class="content-container">
                 <h1 id="current-location">Minneapolis</h1>
                 <h2 id="current-temperature">70°F</h2>
                 <span id="conditions-icon"></span>
                 <h4 id="current-conditions">Partly Cloudy</h4>
             </div>
-            <div id="other-weather-information">
+            <div id="weather-gif" class="content-container">
             </div>
         </div>
-        <div id="weather-future"></div>
     </div>
 </body>
 </html>
