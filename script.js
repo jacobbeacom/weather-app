@@ -10,6 +10,7 @@ document.getElementById('getWeather').addEventListener('click', async (e) => {
     const result = await getWeatherData(location);
     console.log(result);
     populatePage(result);
+    getWeatherGif();
 });
 
 async function getWeatherData(location) {
@@ -30,7 +31,6 @@ async function getWeatherData(location) {
 
   function getUnits() {
     const checkBox = document.getElementById('units');
-    console.log(checkBox.checked);
     if (checkBox.checked == true) {
         return 'metric';
     } else {
@@ -39,7 +39,6 @@ async function getWeatherData(location) {
 }
 
   function populatePage(result) {
-    
     function unitChar () {
       let unit;
       let unitType = getUnits();  
@@ -50,9 +49,17 @@ async function getWeatherData(location) {
       };
       return unit;
     };
-    
     currentLocation.innerHTML = result.name;
     currentTemperature.innerHTML = `${result.main.temp} ${unitChar()}°`;
     currentConditions.innerHTML = result.weather[0].description;
+  }
 
+  async function getWeatherGif() {
+    const img = document.querySelector('img');
+    const conditions = document.getElementById('current-conditions').innerHTML;
+    
+    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=1hWWsAgbExBXg9E9OiJrYMCvLeDDJOhK&s=${conditions}`, {mode: 'cors'});
+    const gifData = await response.json();
+    console.log(gifData);
+    img.src = gifData.data.images.original.url;
   }
