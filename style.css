@@ -127,6 +127,7 @@ body {
     padding: 2rem;
     border-radius: 10px 10px 10px;
     max-height: 500px;
+    height: fit-content;
     margin: 1rem;
   }
   
